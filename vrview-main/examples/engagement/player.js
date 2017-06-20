@@ -76,27 +76,27 @@ function onLoad() {
     if (formatTime(vrView.currentTime) ==  formatTime(0) && !videoStarts) {
       //console.log('multimedia:VIDEO STARTS');
       videoStarts = true;
-      parent.$('ad_stage').dispatchEvent(video_starts);
+      parent.$('body').dispatchEvent(video_starts);
     }
     if (formatTime(vrView.currentTime) == q1 && !videoQ1) {
       //console.log('multimedia:VIDEO Q1');
       videoQ1 = true;
-      parent.$('ad_stage').dispatchEvent(video_q1);
+      parent.$('body').dispatchEvent(video_q1);
     }
     if (formatTime(vrView.currentTime) == q2 && !videoQ2) {
       //console.log('multimedia:VIDEO Q2');
       videoQ2 = true;
-      parent.$('ad_stage').dispatchEvent(video_q2);
+      parent.$('body').dispatchEvent(video_q2);
     }
     if (formatTime(vrView.currentTime) == q3 && !videoQ3) {
       //console.log('multimedia:VIDEO Q3');
       videoQ3 = true;
-      parent.$('ad_stage').dispatchEvent(video_q3);
+      parent.$('body').dispatchEvent(video_q3);
     }
     if (formatTime(vrView.currentTime) == formatTime(vrView.duration) && !videoCompletes) {
       //console.log('multimedia:VIDEO COMPLETES');
       videoCompletes = true;
-      parent.$('ad_stage').dispatchEvent(video_completes);
+      parent.$('body').dispatchEvent(video_completes);
     }
     //console.log('currently playing ' + current + ' secs.');
   });
