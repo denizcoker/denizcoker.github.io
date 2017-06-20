@@ -60,13 +60,21 @@ function onLoad() {
     var q1 = formatTime(vrView.duration * .25);
     var q2 = formatTime(vrView.duration * .50);
     var q3 = formatTime(vrView.duration * .75);
-
+  
+    /*
     var video_starts = new Event('VIDEOSTARTED');
     var video_q1 = new Event('VIDEOQ1');
     var video_q2 = new Event('VIDEOQ2');
     var video_q3 = new Event('VIDEOQ3');
     var video_completes = new Event('VIDEOCOMPLETE');
-
+    */
+   
+    var video_starts = new CustomEvent('VIDEOSTARTED');
+    var video_q1 = new CustomEvent('VIDEOQ1');
+    var video_q2 = new CustomEvent('VIDEOQ2');
+    var video_q3 = new CustomEvent('VIDEOQ3');
+    var video_completes = new CustomEvent('VIDEOCOMPLETE');
+    
     addEventListener('VIDEOSTARTED', function (e) { console.log('multimedia:VIDEO STARTS'); }, false);
     addEventListener('VIDEOQ1', function (e) { console.log('multimedia:VIDEO Q1'); }, false);
     addEventListener('VIDEOQ2', function (e) { console.log('multimedia:VIDEO Q2'); }, false);
