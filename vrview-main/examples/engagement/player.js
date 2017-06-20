@@ -69,7 +69,7 @@ function onLoad() {
     var video_completes = new Event('VIDEOCOMPLETE');
     */
    
-    var frame = document.getElementById('#ad_stage'); 
+    var frame = document.getElementById('#vrview'); 
     
     var video_starts = new CustomEvent('VIDEOSTARTED');
     var video_q1 = new CustomEvent('VIDEOQ1');
