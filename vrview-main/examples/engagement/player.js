@@ -69,6 +69,8 @@ function onLoad() {
     var video_completes = new Event('VIDEOCOMPLETE');
     */
    
+    var frame = document.getElementById('ad_stage'); 
+    
     var video_starts = new CustomEvent('VIDEOSTARTED');
     var video_q1 = new CustomEvent('VIDEOQ1');
     var video_q2 = new CustomEvent('VIDEOQ2');
@@ -85,26 +87,31 @@ function onLoad() {
       //console.log('multimedia:VIDEO STARTS');
       videoStarts = true;
       window.parent.document.dispatchEvent(video_starts);
+      frame.contentWindow.postMessage("VIDEOSTARTED", '*'); 
     }
     if (formatTime(vrView.currentTime) == q1 && !videoQ1) {
       //console.log('multimedia:VIDEO Q1');
       videoQ1 = true;
       window.parent.document.dispatchEvent(video_q1);
+      frame.contentWindow.postMessage("VIDEOQ1", '*'); 
     }
     if (formatTime(vrView.currentTime) == q2 && !videoQ2) {
       //console.log('multimedia:VIDEO Q2');
       videoQ2 = true;
       window.parent.document.dispatchEvent(video_q2);
+      frame.contentWindow.postMessage("VIDEOQ2", '*'); 
     }
     if (formatTime(vrView.currentTime) == q3 && !videoQ3) {
       //console.log('multimedia:VIDEO Q3');
       videoQ3 = true;
       window.parent.document.dispatchEvent(video_q3);
+      frame.contentWindow.postMessage("VIDEOQ3", '*'); 
     }
     if (formatTime(vrView.currentTime) == formatTime(vrView.duration) && !videoCompletes) {
       //console.log('multimedia:VIDEO COMPLETES');
       videoCompletes = true;
       window.parent.document.dispatchEvent(video_completes);
+      frame.contentWindow.postMessage("VIDEOCOMPLETES", '*'); 
     }
     //console.log('currently playing ' + current + ' secs.');
   });
