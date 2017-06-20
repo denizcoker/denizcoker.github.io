@@ -86,31 +86,31 @@ function onLoad() {
     if (formatTime(vrView.currentTime) ==  formatTime(0) && !videoStarts) {
       //console.log('multimedia:VIDEO STARTS');
       videoStarts = true;
-      window.parent.document.dispatchEvent(video_starts);
+      //window.parent.document.dispatchEvent(video_starts);
       frame.contentWindow.postMessage("VIDEOSTARTED", '*'); 
     }
     if (formatTime(vrView.currentTime) == q1 && !videoQ1) {
       //console.log('multimedia:VIDEO Q1');
       videoQ1 = true;
-      window.parent.document.dispatchEvent(video_q1);
+      //window.parent.document.dispatchEvent(video_q1);
       frame.contentWindow.postMessage("VIDEOQ1", '*'); 
     }
     if (formatTime(vrView.currentTime) == q2 && !videoQ2) {
       //console.log('multimedia:VIDEO Q2');
       videoQ2 = true;
-      window.parent.document.dispatchEvent(video_q2);
+      //window.parent.document.dispatchEvent(video_q2);
       frame.contentWindow.postMessage("VIDEOQ2", '*'); 
     }
     if (formatTime(vrView.currentTime) == q3 && !videoQ3) {
       //console.log('multimedia:VIDEO Q3');
       videoQ3 = true;
-      window.parent.document.dispatchEvent(video_q3);
+      //window.parent.document.dispatchEvent(video_q3);
       frame.contentWindow.postMessage("VIDEOQ3", '*'); 
     }
     if (formatTime(vrView.currentTime) == formatTime(vrView.duration) && !videoCompletes) {
       //console.log('multimedia:VIDEO COMPLETES');
       videoCompletes = true;
-      window.parent.document.dispatchEvent(video_completes);
+      //window.parent.document.dispatchEvent(video_completes);
       frame.contentWindow.postMessage("VIDEOCOMPLETES", '*'); 
     }
     //console.log('currently playing ' + current + ' secs.');
