@@ -87,31 +87,31 @@ function onLoad() {
       //console.log('multimedia:VIDEO STARTS');
       videoStarts = true;
       //window.parent.document.dispatchEvent(video_starts);
-      parent.postMessage("VIDEOSTARTED", 'https://serve.truex.com'); 
+      parent.postMessage("VIDEOSTARTED", 'https://denizcoker.github.io'); 
     }
     if (formatTime(vrView.currentTime) == q1 && !videoQ1) {
       //console.log('multimedia:VIDEO Q1');
       videoQ1 = true;
       //window.parent.document.dispatchEvent(video_q1);
-      parent.postMessage("VIDEOQ1", 'https://serve.truex.com'); 
+      parent.postMessage("VIDEOQ1", 'https://denizcoker.github.io'); 
     }
     if (formatTime(vrView.currentTime) == q2 && !videoQ2) {
       //console.log('multimedia:VIDEO Q2');
       videoQ2 = true;
       //window.parent.document.dispatchEvent(video_q2);
-      parent.postMessage("VIDEOQ2", 'https://serve.truex.com'); 
+      parent.postMessage("VIDEOQ2", 'https://denizcoker.github.io'); 
     }
     if (formatTime(vrView.currentTime) == q3 && !videoQ3) {
       //console.log('multimedia:VIDEO Q3');
       videoQ3 = true;
       //window.parent.document.dispatchEvent(video_q3);
-      parent.postMessage("VIDEOQ3", 'https://serve.truex.com'); 
+      parent.postMessage("VIDEOQ3", 'https://denizcoker.github.io'); 
     }
     if (formatTime(vrView.currentTime) == formatTime(vrView.duration) && !videoCompletes) {
       //console.log('multimedia:VIDEO COMPLETES');
       videoCompletes = true;
       //window.parent.document.dispatchEvent(video_completes);
-      parent.postMessage("VIDEOCOMPLETES", 'https://serve.truex.com'); 
+      parent.postMessage("VIDEOCOMPLETES", 'https://denizcoker.github.io'); 
     }
     //console.log('currently playing ' + current + ' secs.');
   });
