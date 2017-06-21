@@ -37,7 +37,7 @@ function onLoad() {
     is_vr_off: true,
   });
 
-  addEventListener('message', function (e) {
+  window.addEventListener('message', function (e) {
         if (e.data == 'PAUSE') {
             vrView.pause();
             console.log('vrView.isPaused');
