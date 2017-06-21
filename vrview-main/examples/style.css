@@ -66,13 +66,13 @@ iframe {
 
 #togglemute {
   float: right;
-  background: url('img/ic_volume_up_black_24dp.svg');
+  /* background: url('img/ic_volume_up_black_24dp.svg'); */
   width: 24px;
   height: 24px;
 }
 
   #togglemute.muted {
-    background: url('img/ic_volume_off_black_24dp.svg');
+    /* background: url('img/ic_volume_off_black_24dp.svg'); */
   }
 
 /* MOBILE */
@@ -85,12 +85,8 @@ iframe {
 /* DESKTOP */
 @media screen and (min-width: 700px) {
   iframe {
-    height: 500px;
-    width: 960px;
-    /*
     height: 400px;
     width: 700px;
-    */
   }
 
   h1, h2, p {
