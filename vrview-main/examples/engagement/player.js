@@ -33,7 +33,7 @@ function onLoad() {
     //is_debug: true,
     //default_heading: 90,
     //is_yaw_only: true,
-    //is_vr_off: true,
+    is_vr_off: true,
   });
 
   playButton = document.querySelector('#toggleplay');
