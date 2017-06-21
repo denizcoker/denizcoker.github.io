@@ -24,7 +24,7 @@ var videoCompletes = false;
 
 function onLoad() {
   // Load VR View.
-  vrView = new VRView.Player('#vrview', {
+  vrView = new VRView.Player('vrview', {
     width: 960, //width: '100%',
     height: 500,
     video: 'https://media.truex.com/file_assets/2017-06-15/20428f1f-5958-413d-9047-fd720e7299c7.mp4',
