@@ -77,11 +77,13 @@ function onLoad() {
     var video_q3 = new CustomEvent('VIDEOQ3');
     var video_completes = new CustomEvent('VIDEOCOMPLETE');
     
+    /*
     addEventListener('VIDEOSTARTED', function (e) { console.log('multimedia:VIDEO STARTS'); }, false);
     addEventListener('VIDEOQ1', function (e) { console.log('multimedia:VIDEO Q1'); }, false);
     addEventListener('VIDEOQ2', function (e) { console.log('multimedia:VIDEO Q2'); }, false);
     addEventListener('VIDEOQ3', function (e) { console.log('multimedia:VIDEO Q3'); }, false);
     addEventListener('VIDEOCOMPLETE', function (e) { console.log('multimedia:VIDEO COMPLETES'); }, false);
+    */
 
     if (formatTime(vrView.currentTime) ==  formatTime(0) && !videoStarts) {
       //console.log('multimedia:VIDEO STARTS');
