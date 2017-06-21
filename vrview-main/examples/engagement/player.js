@@ -23,7 +23,7 @@ var videoQ3 = true;
 var videoCompletes = true;
 
 
-parent.addEventListener('message', function (e) {
+addEventListener('message', function (e) {
         if (e.data == 'PAUSE') {
             vrView.pause();
             console.log('vrView.isPaused');
