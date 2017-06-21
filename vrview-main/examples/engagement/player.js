@@ -43,6 +43,15 @@ function onLoad() {
   //playButton.addEventListener('click', onTogglePlay);
   //muteButton.addEventListener('click', onToggleMute);
 
+  this.addEventListener('message', function (e) {
+        if (e.data == 'PAUSE') {
+            vrView.pause();
+        }
+        //console.log(e.data); //use if debugging
+        
+    } );
+    
+
   vrView.on('ready', onVRViewReady);
 
   vrView.on('play', function() {
