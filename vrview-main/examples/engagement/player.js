@@ -23,15 +23,6 @@ var videoQ3 = true;
 var videoCompletes = true;
 
 
-addEventListener('message', function (e) {
-        if (e.data == 'PAUSE') {
-            vrView.pause();
-            console.log('vrView.isPaused');
-        }
-        //console.log(e.data); //use if debugging
-        
-    } );
-
 function onLoad() {
   // Load VR View.
   vrView = new VRView.Player('#vrview', {
@@ -45,6 +36,15 @@ function onLoad() {
     //is_yaw_only: true,
     is_vr_off: true,
   });
+
+  parent.addEventListener('message', function (e) {
+        if (e.data == 'PAUSE') {
+            vrView.pause();
+            console.log('vrView.isPaused');
+        }
+        //console.log(e.data); //use if debugging
+        
+    } );
 
   //playButton = document.querySelector('#toggleplay');
   //muteButton = document.querySelector('#togglemute');
