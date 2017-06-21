@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 var vrView;
-var playButton;
-var muteButton;
+//var playButton;
+//var muteButton;
 
 var videoStarts = false;
 var videoQ1 = true;
@@ -36,12 +36,12 @@ function onLoad() {
     is_vr_off: true,
   });
 
-  playButton = document.querySelector('#toggleplay');
-  muteButton = document.querySelector('#togglemute');
-  timeContainer = document.querySelector('#time');
+  //playButton = document.querySelector('#toggleplay');
+  //muteButton = document.querySelector('#togglemute');
+  //timeContainer = document.querySelector('#time');
 
-  playButton.addEventListener('click', onTogglePlay);
-  muteButton.addEventListener('click', onToggleMute);
+  //playButton.addEventListener('click', onTogglePlay);
+  //muteButton.addEventListener('click', onToggleMute);
 
   vrView.on('ready', onVRViewReady);
 
@@ -55,7 +55,7 @@ function onLoad() {
   vrView.on('timeupdate', function(e) {
     var current = formatTime(e.currentTime);
     var duration = formatTime(e.duration);
-    timeContainer.innerText = current + ' | ' + duration;
+    //timeContainer.innerText = current + ' | ' + duration;
 
     var q1 = formatTime(vrView.duration * .25);
     var q2 = formatTime(vrView.duration * .50);
@@ -90,7 +90,7 @@ function onLoad() {
   });
   vrView.on('ended', function() {
     //console.log('media ended');
-    playButton.classList.add('paused');
+    //playButton.classList.add('paused');
   });
 }
 
@@ -98,22 +98,23 @@ function onVRViewReady() {
   console.log('vrView.isPaused', vrView.isPaused);
   // Set the initial state of the buttons.
   if (vrView.isPaused) {
-    playButton.classList.add('paused');
+    //playButton.classList.add('paused');
   } else {
-    playButton.classList.remove('paused');
+    //playButton.classList.remove('paused');
   }
 }
 
 function onTogglePlay() {
   if (vrView.isPaused) {
     vrView.play();
-    playButton.classList.remove('paused');
+    //playButton.classList.remove('paused');
   } else {
     vrView.pause();
-    playButton.classList.add('paused');
+    //playButton.classList.add('paused');
   }
 }
 
+/*
 function onToggleMute() {
   var isMuted = muteButton.classList.contains('muted');
   if (isMuted) {
@@ -123,6 +124,7 @@ function onToggleMute() {
   }
   muteButton.classList.toggle('muted');
 }
+*/
 
 function formatTime(time) {
   time = !time || typeof time !== 'number' || time < 0 ? 0 : time;
